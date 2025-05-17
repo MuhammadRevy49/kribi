@@ -1,6 +1,6 @@
 'use client';
-import { useState, useEffect, use } from 'react';
-import a from 'next/link';
+import { useState, useEffect} from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -27,36 +27,36 @@ export default function Navbar() {
           <div className="flex items-center hover:cursor-pointer">
             <img src="./images/logo-kribi-pth.png" className="h-10"/>
             <div className="flex flex-col ml-2 m-0">
-              <a href="/" className="font-bold text-xl text-white leading-none italic">
+              <Link href="/" className="font-bold text-xl text-white leading-none italic">
                 Keripik
                 <br/>
                 Indonesia
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="/#beranda" className="text-white p-2 font-bold transition relative text-red-500 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+            <Link href="/#beranda" className="text-white p-2 font-bold transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
               Beranda
-            </a>
-            <a href="/#produk" className="text-white p-2 font-bold transition relative text-red-500 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+            </Link>
+            <Link href="/#produk" className="text-white p-2 font-bold transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
               Produk
-            </a>
-            <a href="/#layanan" className="text-white p-2 font-bold transition relative text-red-500 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+            </Link>
+            <Link href="/#layanan" className="text-white p-2 font-bold transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
               Layanan
-            </a>
-            <a href="/#tentang" className="text-white p-2 font-bold transition relative text-red-500 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+            </Link>
+            <Link href="/#tentang" className="text-white p-2 font-bold transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
               Tentang
-            </a>
-            <a href="/#album" className="text-white p-2 font-bold transition relative text-red-500 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+            </Link>
+            <Link href="/#album" className="text-white p-2 font-bold transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
               Dokumentasi
-            </a>
-            <a href="/login" className={`p-2 pl-4 pr-4 rounded-full font-bold transition ${
+            </Link>
+            <Link href="/login" className={`p-2 pl-4 pr-4 rounded-full font-bold transition ${
       scrolled ? 'bg-white text-red-500 hover:bg-gray-300' : 'bg-red-500 text-white hover:bg-white hover:text-red-500'
     }`}>
               Masuk/Daftar
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -74,21 +74,21 @@ export default function Navbar() {
     isOpen ? 'max-h-96 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
   }`}
 >
-  <a href="/#beranda" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
+  <Link href="/#beranda" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
     Beranda
-  </a>
-  <a href="/#produk" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
+  </Link>
+  <Link href="/#produk" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
     Produk
-  </a>
-  <a href="/#layanan" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
+  </Link>
+  <Link href="/#layanan" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
     Layanan
-  </a>
-  <a href="/#tentang" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
+  </Link>
+  <Link href="/#tentang" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
     Tentang
-  </a>
-  <a href="/#kontak" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
+  </Link>
+  <Link href="/#kontak" onClick={()=> {setIsOpen(false)}} className="p-3 block text-white font-bold hover:text-gray-300 transition-all">
     Kontak
-  </a>
+  </Link>
 </div>
 
     </nav>
