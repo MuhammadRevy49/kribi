@@ -8,9 +8,10 @@ import 'swiper/css/pagination';
 
 export default function Album() {
     const images = [
-        "https://i0.wp.com/www.tokomesin.com/wp-content/uploads/2017/09/singkong-balado-pedas.png?fit=555%2C416&ssl=1",
-        "https://serikatnews.com/wp-content/uploads/2023/04/astronauts-id.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBmR946Cr2VcfC_M4-zrn8W-1Rbbk-2dGNA&s"
+        "/images/gambar1.jpeg",
+        "/images/gambar2.jpeg",
+        "/images/gambar3.jpeg",
+        "/images/gambar4.jpeg",
     ];
     return (
         <div id="album" className="bg-white w-full h-full overflow-x-hidden">
